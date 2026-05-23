@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  width: 100%;
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 60px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logoImage {
+  width: 100px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.logoImage:hover {
+  transform: scale(1.08);
+}
+
+.navMenu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 45px;
+}
+
+.navItem {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1e293b;
+  cursor: pointer;
+  position: relative;
+  transition: 0.3s;
+  list-style-type: none;
+}
+
+.navItem::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 0%;
+  height: 3px;
+  border-radius: 10px;
+  background: #6366f1;
+  transition: 0.3s;
+}
+
+.navItem:hover {
+  color: #6366f1;
+}
+
+.navItem:hover::after {
+  width: 100%;
+}
+
+.logoutBtn {
+  padding: 12px 22px;
+  background: #ef4444;
+  color: white;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.logoutBtn::after {
+  display: none;
+}
+
+.logoutBtn:hover {
+  background: #dc2626;
+  color: white;
+  transform: translateY(-2px);
+}
+.link {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    width: 100%;
+
+    padding: 10px 12px;
+
+    display: flex;
+
+    flex-direction: row;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    overflow: hidden;
+  }
+
+  .logoContainer {
+    width: 70px;
+
+    height: 50px;
+
+    flex-shrink: 0;
+  }
+
+  .logoImage {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+  }
+
+  .navMenu {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    list-style: none;
+
+    padding: 0;
+
+    margin: 0;
+  }
+
+  .navItem {
+    font-size: 14px;
+
+    font-weight: 600;
+  }
+
+  .logoutBtn {
+    padding: 8px 12px;
+
+    font-size: 14px;
+
+    border-radius: 10px;
+  }
+}

@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #e9edff;
+}
+
+.ticketPage {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.travelCard {
+  width: 850px;
+  background: white;
+  border-radius: 32px;
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.imageContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.travelImage {
+  width: 100%;
+  max-width: 700px;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 28px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.detailsContainer {
+  width: 100%;
+  background: #f8f9ff;
+  border-radius: 24px;
+  padding: 15px 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.detailRow {
+  min-height: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #dbe2f0;
+}
+
+.detailRow:last-child {
+  border-bottom: none;
+}
+
+.detailLabel {
+  font-size: 22px;
+  font-weight: bold;
+  color: #111827;
+}
+
+.detailValue {
+  font-size: 22px;
+  color: #667085;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.backBtn {
+  width: 140px;
+  height: 55px;
+  border: none;
+  outline: none;
+  border-radius: 16px;
+  background: #e2e8f0;
+  color: #1e293b;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+.backBtn:hover {
+  background: #cbd5e1;
+  transform: translateY(-3px);
+}
+.backBtn:active {
+  transform: scale(0.98);
+}
+
+.bookBtn {
+  width: 240px;
+  height: 70px;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(to right, #4f46e5, #4338ca);
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  align-self: flex-start;
+  box-shadow: 0 10px 20px rgba(79, 70, 229, 0.3);
+}
+
+.bookedBtn {
+  width: 240px;
+  height: 70px;
+  border: none;
+  border-radius: 20px;
+  background: grey;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  align-self: flex-start;
+  box-shadow: 0 10px 20px rgba(79, 70, 229, 0.3);
+}
+
+.bookBtn:hover {
+  transform: translateY(-4px);
+  background: linear-gradient(to right, #4338ca, #312e81);
+}
+
+@media (max-width: 900px) {
+  .travelCard {
+    width: 100%;
+    padding: 25px;
+  }
+  .travelImage {
+    height: 300px;
+  }
+  .detailLabel,
+  .detailValue {
+    font-size: 22px;
+  }
+  .bookBtn {
+    width: 100%;
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .ticketPage {
+    padding: 18px;
+  }
+
+  .travelImage {
+    height: 220px;
+  }
+
+  .detailRow {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 15px 0;
+  }
+  .detailLabel,
+  .detailValue {
+    font-size: 18px;
+  }
+
+  .bookBtn {
+    height: 60px;
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.loginPage {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 60px;
+  background: linear-gradient(to right, #eef2ff, #f8fafc);
+  padding: 40px;
+}
+
+.loginImage {
+  width: 50%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.formSection {
+  width: 420px;
+  min-height: 480px;
+  background: white;
+  border-radius: 25px;
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.inputBox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.label {
+  font-size: 18px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.input {
+  height: 55px;
+  border: none;
+  outline: none;
+  padding: 0 18px;
+  border-radius: 12px;
+  background: #f1f5f9;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.error-message {
+  font-size: 14px;
+  color: red;
+  font-weight: 500;
+}
+
+.inputBox input:focus {
+  border: 2px solid #6366f1;
+  background: white;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+.error-message {
+  color: red;
+  text-align: center;
+}
+.loginBtn {
+  height: 55px;
+  width: 150px;
+  border: none;
+  border-radius: 14px;
+  background: #6366f1;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+
+.loginBtn:hover {
+  background: #4f46e5;
+  transform: translateY(-2px);
+}
+
+.buttonContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+.signupBtn {
+  margin-left: auto;
+  width: 220px;
+  height: 58px;
+  border: none;
+  border-radius: 18px;
+  background: linear-gradient(to right, #7c3aed, #6366f1);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.signupBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
+}
+
+@media screen and (max-width: 768px) {
+  .signupBtn {
+    width: 100%;
+    max-width: 260px;
+    height: 52px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 900px) {
+  .loginPage {
+    flex-direction: column;
+  }
+  .imageSection,
+  .formSection {
+    width: 100%;
+    max-width: 420px;
+  }
+}

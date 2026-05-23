@@ -1,0 +1,219 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #eef2ff;
+}
+
+.mainContainer {
+  min-height: 100vh;
+  display: flex;
+  gap: 30px;
+  padding: 30px;
+}
+
+.placesSection {
+  background: white;
+  border-radius: 24px;
+  padding: 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.notesSection {
+  flex: 1;
+  background: white;
+  border-radius: 24px;
+  padding: 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  height: 600px;
+  overflow-y: auto;
+}
+
+.placesSection {
+  flex: 2;
+}
+
+.notesSection {
+  flex: 1;
+}
+
+.sectionTitle {
+  font-size: 32px;
+  color: #1e293b;
+}
+
+.searchContainer,
+.notesInputContainer {
+  display: flex;
+  gap: 15px;
+}
+
+.searchInput,
+.notesInput {
+  flex: 1;
+  height: 60px;
+  border: none;
+  outline: none;
+  background: #f1f5f9;
+  border-radius: 16px;
+  padding: 0 20px;
+  font-size: 17px;
+  transition: 0.3s;
+}
+
+.searchInput:focus,
+.notesInput:focus {
+  border: 2px solid #6366f1;
+  background: white;
+}
+
+.searchBtn,
+.addBtn {
+  width: 130px;
+  border: none;
+  border-radius: 16px;
+  background: #6366f1;
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.searchBtn:hover,
+.addBtn:hover {
+  background: #4f46e5;
+  transform: translateY(-2px);
+}
+
+.placesResults {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.placeCard {
+  padding: 25px;
+  border-radius: 20px;
+  background: linear-gradient(to right, #ffffff, #f8fafc);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.placeCard:hover {
+  transform: translateY(-4px);
+}
+
+.placeName {
+  font-size: 26px;
+  color: #1e293b;
+  margin-bottom: 12px;
+}
+
+.arrow-icon {
+  color: #6b7280;
+  transition: all 0.2s ease;
+  display: inline-block;
+  font-size: 20px;
+}
+
+.arrow-icon:hover {
+  color: #3b82f6;
+}
+
+.arrow-container:hover .arrow-icon {
+  color: #3b82f6;
+  transform: translateX(-4px);
+}
+
+.placeDescription {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #64748b;
+}
+
+.notesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  min-height: 50%;
+}
+
+.emptyNotes {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 300px;
+  font-size: 32px;
+  color: black;
+  font-weight: 600;
+}
+
+.noteCard {
+  padding: 18px;
+  border-radius: 16px;
+  background: #f8fafc;
+  color: #334155;
+  font-size: 16px;
+  line-height: 1.7;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border-left: 5px solid #6366f1;
+  transition: 0.3s;
+  overflow-wrap: break-word;
+}
+
+.noteCard:hover {
+  transform: translateX(5px);
+}
+
+.empty-container {
+  background-color: white;
+  color: black;
+  display: flex;
+  height: 60vh;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1000px) {
+  .mainContainer {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 650px) {
+  .mainContainer {
+    padding: 15px;
+  }
+
+  .placesSection,
+  .notesSection {
+    padding: 20px;
+  }
+
+  .searchContainer,
+  .notesInputContainer {
+    flex-direction: column;
+  }
+
+  .searchBtn,
+  .addBtn {
+    width: 100%;
+    height: 55px;
+  }
+
+  .sectionTitle {
+    font-size: 26px;
+  }
+}
